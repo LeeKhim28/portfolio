@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Chong Lee Khim's AI and data science portfolio featuring hackathon and side projects.">
+    <meta name="theme-color" content="#07111f">
+    <title>Chong Lee Khim | AI &amp; Data Science Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="brand" href="#main-content" aria-label="Chong Lee Khim home">LK</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content" data-portfolio>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow reveal" style="--delay: 60ms">AI · Data · Product</p>
+          <h1 class="reveal" style="--delay: 130ms" id="hero-title">Chong<br><span>Lee Khim</span></h1>
+          <p class="hero-intro reveal" style="--delay: 200ms">Second-year Computer Science student at Taylor's University, specialising in Artificial Intelligence with an extension in Data Science.</p>
+          <div class="hero-actions reveal" style="--delay: 270ms" aria-label="Primary actions">
+            <a class="button button-primary" href="#projects">View projects</a>
+            <a class="button button-secondary" href="https://github.com/LeeKhim28" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+          </div>
+        </div>
+        <div class="hero-orbit reveal" style="--delay: 180ms" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="core">LK</div>
+          <span class="node node-one"></span>
+          <span class="node node-two"></span>
+          <span class="node node-three"></span>
+        </div>
+      </section>
+      <section class="reveal" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="section-index">01 / About</p>
+          <h2 id="about-title">I turn complex workflows into clear, useful systems.</h2>
+        </div>
+        <div class="about-grid">
+          <p class="lead">I am building my foundation across AI, data science, and software engineering through hands-on prototypes, team projects, and fast-paced hackathons.</p>
+          <p>My projects explore how intelligent systems can support better decisions—from matching mentors with companies and checking shipping documents to guiding immigration cases and improving critical-metal operations. I enjoy connecting technical implementation with the people and processes it needs to serve.</p>
+        </div>
+        <div class="skill-cloud" aria-label="Core skills">
+          <span>Python</span><span>Java</span><span>SQL</span><span>C++</span><span>Artificial Intelligence</span><span>Data Science</span><span>Figma</span><span>Tableau</span><span>RStudio</span><span>GitHub</span>
+        </div>
+      </section>
+      <section class="reveal" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="section-index">02 / Selected work</p>
+            <h2 id="projects-title">Hackathon projects</h2>
+          </div>
+          <p class="section-note">Four rapid builds shaped by real operational challenges.</p>
+        </div>
+        <div class="project-grid project-grid-featured">
+          <article class="project-card project-card-featured" data-project="ecograph" data-category="hackathon">
+            <div class="project-topline"><span>MyHack · Build With AI 2026</span><span>01</span></div>
+            <div class="project-visual visual-graph" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="project-body">
+              <h3>EcoGraph</h3>
+              <p>An AI-powered ecosystem matching platform that reads mentor and company rosters, scores relationships with Gemini AI, and turns every engagement into reusable programme history.</p>
+              <ul class="tech-list" aria-label="EcoGraph technology stack"><li class="tech-tag">React</li><li class="tech-tag">Vite</li><li class="tech-tag">Tailwind CSS</li><li class="tech-tag">Gemini API</li><li class="tech-tag">Excel</li></ul>
+              <a class="project-link" href="https://github.com/Aloysius8895/MyHackathon" target="_blank" rel="noopener noreferrer">View EcoGraph on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="shipping-docs" data-category="hackathon">
+            <div class="project-topline"><span>Averis × Monash Hackathon</span><span>02</span></div>
+            <div class="project-body">
+              <h3>Shipping Document Verification</h3>
+              <p>A document-intelligence pipeline that classifies shipping emails and compares Shipping Instructions against draft Bills of Lading across seven operational fields.</p>
+              <ul class="tech-list" aria-label="Shipping Document Verification technology stack"><li class="tech-tag">Python</li><li class="tech-tag">OCR</li><li class="tech-tag">Document AI</li><li class="tech-tag">Validation Rules</li><li class="tech-tag">Streamlit</li></ul>
+              <a class="project-link" href="https://github.com/LeeKhim28/MonashHack" target="_blank" rel="noopener noreferrer">View project on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="metrix" data-category="hackathon">
+            <div class="project-topline"><span>GuangXi AI Metals Hackathon</span><span>03</span></div>
+            <div class="project-body">
+              <h3>MetriX AI</h3>
+              <p>An AI decision platform for critical-metal mining, combining equipment and route optimisation, representative sampling support, and secondary-resource value assessment.</p>
+              <ul class="tech-list" aria-label="MetriX AI technology stack"><li class="tech-tag">Python</li><li class="tech-tag">Graph Optimisation</li><li class="tech-tag">A*</li><li class="tech-tag">K-Means</li><li class="tech-tag">Value Modelling</li></ul>
+              <a class="project-link" href="https://github.com/Aloysius8895/guanxiHack" target="_blank" rel="noopener noreferrer">View MetriX on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="livincore" data-category="hackathon">
+            <div class="project-topline"><span>UM Technothon</span><span>04</span></div>
+            <div class="project-body">
+              <h3>LivinCore OS</h3>
+              <p>A smart-living operating concept that brings fragmented home, community, and service decisions into one coordinated digital blueprint.</p>
+              <ul class="tech-list" aria-label="LivinCore OS focus areas"><li class="tech-tag">AI Systems</li><li class="tech-tag">Service Design</li><li class="tech-tag">Workflow Mapping</li><li class="tech-tag">Product Strategy</li></ul>
+              <span class="project-status">Concept project</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-heading section-heading-row side-project-heading">
+          <div>
+            <p class="section-index">Independent exploration</p>
+            <h2>Side projects</h2>
+          </div>
+          <p class="section-note">Longer-form ideas developed beyond a competition brief.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-project="immigration" data-category="side-project">
+            <div class="project-topline"><span>GovTech · Case Management</span><span>A</span></div>
+            <div class="project-body">
+              <h3>AI Immigration Case Management Platform</h3>
+              <p>A mobile-first, two-sided workflow connecting applicants and officers through personalised checklists, document pre-checks, human verification, expiry monitoring, audit trails, and appointment coordination.</p>
+              <ul class="tech-list" aria-label="Immigration platform technology stack"><li class="tech-tag">Python</li><li class="tech-tag">OCR</li><li class="tech-tag">RAG</li><li class="tech-tag">Validation Rules</li><li class="tech-tag">Workflow Design</li></ul>
+              <a class="project-link" href="https://github.com/LeeKhim28/immigration-flow" target="_blank" rel="noopener noreferrer">View platform on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card" data-project="mindcare" data-category="side-project">
+            <div class="project-topline"><span>SDG 3 · Mental Well-being</span><span>B</span></div>
+            <div class="project-body">
+              <h3>MindCare</h3>
+              <p>An AI-based mental-health support prototype designed to provide continuous emotional assistance. I led the team workflow across iterative sprints and coordinated delivery milestones.</p>
+              <ul class="tech-list" aria-label="MindCare project stack"><li class="tech-tag">Figma</li><li class="tech-tag">Agile Scrum</li><li class="tech-tag">SDLC</li><li class="tech-tag">GitHub</li><li class="tech-tag">Trello</li></ul>
+              <a class="project-link" href="https://github.com/LeeKhim28/SDG3-MentalHealthPrototype" target="_blank" rel="noopener noreferrer">View MindCare on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="reveal" id="education" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="section-index">03 / Education</p>
+          <h2 id="education-title">Building depth in intelligent systems.</h2>
+        </div>
+        <div class="education-card">
+          <div>
+            <p class="education-year">April 2025 — Present</p>
+            <h3>Taylor's University Malaysia</h3>
+            <p>Bachelor of Computer Science</p>
+            <p>Specialisation in Artificial Intelligence · Extension in Data Science (Work-Based Learning)</p>
+          </div>
+          <div class="education-stats">
+            <div><strong>3.80</strong><span>Current CGPA / 4.00</span></div>
+            <div><strong>02</strong><span>Second-year student</span></div>
+          </div>
+        </div>
+        <div class="achievement-row" aria-label="Academic achievements">
+          <span>Dean's List</span><span>Excellence Award</span>
+        </div>
+      </section>
+      <section class="reveal" id="contact" aria-labelledby="contact-title">
+        <p class="section-index">04 / Contact</p>
+        <div class="contact-panel">
+          <div>
+            <h2 id="contact-title">Let's build something useful.</h2>
+            <p>I am always interested in thoughtful AI, data, and software projects.</p>
+          </div>
+          <a class="button button-primary" href="mailto:chongleekhim0928@gmail.com">Send an email</a>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:chongleekhim0928@gmail.com"><span>Email</span><strong>chongleekhim0928@gmail.com</strong></a>
+          <a href="https://www.linkedin.com/in/chong-lee-khim-094808392" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Chong Lee Khim</strong></a>
+          <a href="https://www.instagram.com/leekhimm_28" target="_blank" rel="noopener noreferrer"><span>Instagram</span><strong>@leekhimm_28</strong></a>
+          <a href="https://github.com/LeeKhim28" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>@LeeKhim28</strong></a>
+        </div>
+      </section>
+    </main>
+    <footer><p>© <span data-year>2026</span> Chong Lee Khim</p><p>Built with curiosity and care.</p></footer>
+  </body>
+</html>
