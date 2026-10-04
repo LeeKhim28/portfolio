@@ -1,19 +1,62 @@
 document.documentElement.dataset.js = 'ready';
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const reveals = document.querySelectorAll('.reveal');
+const reveals = [...document.querySelectorAll('.reveal, .project-row, .education-row, .achievement-row, .stack-row, .experience-row, .contact-row')];
+
+reveals.forEach((element, index) => {
+  element.classList.add('motion-item');
+  element.style.setProperty('--reveal-delay', `${(index % 4) * 70}ms`);
+});
 
 if (reduceMotion || !('IntersectionObserver' in window)) {
   reveals.forEach((element) => element.classList.add('is-visible'));
 } else {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
+      if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      else entry.target.classList.remove('is-visible');
     });
   }, { threshold: 0.14 });
   reveals.forEach((element) => revealObserver.observe(element));
+}
+
+const counters = [...document.querySelectorAll('[data-count-to]')];
+
+const setCounterValue = (element, progress = 1) => {
+  const targetText = element.dataset.countTo ?? '0';
+  const target = Number(targetText);
+  const decimals = targetText.includes('.') ? targetText.split('.')[1].length : 0;
+  const value = target * progress;
+  element.textContent = decimals ? value.toFixed(decimals) : String(Math.round(value)).padStart(targetText.length, '0');
+};
+
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  counters.forEach((element) => setCounterValue(element));
+} else {
+  counters.forEach((element) => setCounterValue(element, 0));
+  const counterRuns = new WeakMap();
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        counterRuns.set(entry.target, (counterRuns.get(entry.target) ?? 0) + 1);
+        setCounterValue(entry.target, 0);
+        return;
+      }
+      const run = (counterRuns.get(entry.target) ?? 0) + 1;
+      counterRuns.set(entry.target, run);
+      const start = performance.now();
+      const duration = 900;
+      const tick = (now) => {
+        if (counterRuns.get(entry.target) !== run) return;
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setCounterValue(entry.target, eased);
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.65 });
+  counters.forEach((element) => counterObserver.observe(element));
 }
 
 const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
