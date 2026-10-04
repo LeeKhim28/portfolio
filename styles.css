@@ -52,6 +52,7 @@ h1 { margin: 0; font-size: clamp(4.4rem, 10vw, 8.2rem); line-height: .78; }
 h1 em { display: inline-block; color: var(--acid); font: inherit; }
 .hero-intro { max-width: 42rem; margin: 2rem 0 0; color: var(--muted); font-size: 1.08rem; line-height: 1.58; }
 .hero-tags, .stack-row { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.5rem; }
+.stack-row + .stack-row { margin-top: .75rem; }
 .hero-tags span, .stack-row span, .tech-tag { padding: .38rem .72rem; border: 2px solid var(--paper); border-radius: .45rem; color: var(--paper); font-size: .7rem; font-weight: 850; line-height: 1.2; text-transform: uppercase; box-shadow: 3px 3px 0 rgba(247,245,240,.2); }
 
 .section-title-line { display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: center; margin-bottom: 3rem; }
