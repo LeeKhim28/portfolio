@@ -162,7 +162,8 @@ html[data-js="ready"] .hero .motion-item { transition-delay: var(--delay,var(--r
   .about-copy { grid-template-columns: 1fr; gap: 1.5rem; }
   .project-row { grid-template-columns: 1.7rem minmax(0,1fr); gap: .8rem; padding: 1.9rem 0; }
   .project-meta { grid-column: 2; }
-  .project-media, .kerjayaku-media { grid-template-columns: 1fr; }
+  .project-media { grid-template-columns: 1fr; }
+  .kerjayaku-media { grid-template-columns: 1fr 1fr; gap: .7rem; }
   .secondary-project-title { margin-top: 5rem; }
   .education-stats { grid-template-columns: 1fr 1fr; }
   .achievement-row { flex-direction: column; gap: .8rem; }
