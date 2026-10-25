@@ -88,6 +88,8 @@ h1 em { display: inline-block; color: var(--acid); font: inherit; }
 .media-card img { display: block; width: 100%; height: clamp(12rem,42vw,28rem); background: #0b0b0a; object-fit: contain; }
 .media-card img { transition: transform 220ms ease; }
 .media-card:hover img, .media-card:focus-visible img { transform: scale(1.035); }
+.kerjayaku-media { grid-template-columns: repeat(2, minmax(0,20rem)); }
+.kerjayaku-media .media-card img { height: auto; aspect-ratio: 1106 / 922; object-fit: cover; }
 .secondary-project-title { margin-top: 7rem; }
 
 .education-row { display: grid; grid-template-columns: 1fr 18rem; gap: 3rem; align-items: start; padding: 2.3rem 0; border-block: 3px solid var(--paper); }
@@ -160,7 +162,7 @@ html[data-js="ready"] .hero .motion-item { transition-delay: var(--delay,var(--r
   .about-copy { grid-template-columns: 1fr; gap: 1.5rem; }
   .project-row { grid-template-columns: 1.7rem minmax(0,1fr); gap: .8rem; padding: 1.9rem 0; }
   .project-meta { grid-column: 2; }
-  .project-media { grid-template-columns: 1fr; }
+  .project-media, .kerjayaku-media { grid-template-columns: 1fr; }
   .secondary-project-title { margin-top: 5rem; }
   .education-stats { grid-template-columns: 1fr 1fr; }
   .achievement-row { flex-direction: column; gap: .8rem; }
